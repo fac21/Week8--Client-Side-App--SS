@@ -1,0 +1,3 @@
+[build]
+base = "Week8--Client-Side-App--SS"
+publish ="Week8--Client-Side-App--SS/React"
