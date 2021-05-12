@@ -5,7 +5,7 @@ import Profile from "./components/Profile.jsx";
 
 function App() {
   const [nameData, setName] = React.useState(null);
-  //do some stuff
+
   if (!nameData) {
     return (
       <div className="app">
