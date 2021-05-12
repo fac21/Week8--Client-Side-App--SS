@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
-import.meta.env.VITE__APP_API_KEY;
+// import.meta.env.VITE__APP_API_KEY;
 import Profile from "./components/Profile.jsx";
 
 function App() {
-  const [nameData, setName] = React.useState(null);
+  const [nameData, setName] = useState(null);
 
   if (!nameData) {
     return (
