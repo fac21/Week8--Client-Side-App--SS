@@ -2,6 +2,7 @@ import React from "react";
 import AdviceMe from "./AdviceMe";
 import Compliment from "./Compliment";
 import FeedMe from "./FeedMe";
+import App from "../assets/App.css"
 
 const USER_URL = "https://api.github.com/users/";
 
@@ -25,9 +26,9 @@ function Profile(props) {
       return <h1>Congratulations {nameData.login} has graduated FAC!</h1>;
     } else {
       return (
-        <div>
+        <div class="tamagochi">
           <h1>Mentor {nameData.login}</h1>
-          <img src={nameData.avatar_url} alt={nameData.login + "'s image"} />
+          <img src={nameData.avatar_url} alt={nameData.login + "'s image"} class="tamagochi__screen"/>
           <Compliment score={score} setScore={setScore} />
           <AdviceMe score={score} setScore={setScore} />
           <FeedMe score={score} setScore={setScore} />

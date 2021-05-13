@@ -6,12 +6,20 @@ function Compliment(props) {
 
   function handleClick() {
     props.setScore(props.score + randomNumber);
+  }
+
+  React.useEffect(() => {
+    let cancelled = false;
     fetch("https://complimentr.com/api")
       .then((res) => res.json())
       .then((data) => {
+        if (cancelled) return;
         setCompliment(data.compliment);
       });
-  }
+    return () => {
+      cancelled = true;
+    }
+  }, [props.score]);
 
   return (
     <div>
@@ -28,5 +36,6 @@ function Compliment(props) {
     </div>
   );
 }
+
 
 export default Compliment;
