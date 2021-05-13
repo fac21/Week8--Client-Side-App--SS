@@ -1,4 +1,5 @@
 import React from "react";
+import AdviceMe from "./AdviceMe";
 import Compliment from "./Compliment";
 
 const USER_URL = "https://api.github.com/users/";
@@ -23,8 +24,8 @@ function Profile(props) {
         <h1>Mentor {nameData.login}</h1>
         <img src={nameData.avatar_url} alt={nameData.login + "'s image"} />
         <Compliment score={score} setScore={setScore} />
+        <AdviceMe score={score} setScore={setScore}/>
         <button>Feed Me</button>
-        <button>Advise me</button>
       </div>
     );
   }
