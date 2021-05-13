@@ -2,9 +2,10 @@ import React from "react";
 
 function Compliment(props) {
   const [compliment, setCompliment] = React.useState(null);
+  const randomNumber = Math.floor(Math.random() * 10);
 
   function handleClick() {
-    props.setScore(props.score + 5);
+    props.setScore(props.score + randomNumber);
     fetch("https://complimentr.com/api")
       .then((res) => res.json())
       .then((data) => {
