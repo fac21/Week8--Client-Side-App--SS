@@ -21,10 +21,10 @@ function FeedMe(props) {
 
   if (food) {
     return (
-      <div>
+      <div className="ButtonContainer">
         <img className="foodEmoji" src={food} alt="pic-of-food-ite" />
         <button
-          className="feedMe"
+          className="ButtonContainer--feedMe"
           onClick={(e) => {
             handleClickFood();
           }}
@@ -36,7 +36,7 @@ function FeedMe(props) {
   } else {
     return (
       <button
-        className="feedMe"
+        className="ButtonContainer--feedMe"
         onClick={(e) => {
           handleClickFood();
         }}

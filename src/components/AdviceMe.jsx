@@ -25,12 +25,13 @@ function AdviceMe(props) {
     };
   }, [fetching]);
 
+  
   if (advice) {
     return (
-      <div>
+      <div className="ButtonContainer" >
         <h3>{advice}</h3>
         <button
-          className="advice"
+          className="ButtonContainer--advice"
           onClick={(e) => {
             handleClickAdvice();
             setFetching(true);
@@ -42,9 +43,9 @@ function AdviceMe(props) {
     );
   } else {
     return (
-      <div>
+      <div className="ButtonContainer" >
         <button
-          className="advice"
+          className="ButtonContainer--advice"
           onClick={(e) => {
             handleClickAdvice();
             setFetching(true);

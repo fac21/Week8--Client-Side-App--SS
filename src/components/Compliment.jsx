@@ -25,9 +25,10 @@ function Compliment(props) {
     }
   }, [state]);
 
+
   if (compliment) {
     return (
-      <div>
+       <div className="ButtonContainer">
         <h3>{compliment}</h3>
         <p>Your score is {props.score}</p>
         <button
@@ -43,7 +44,7 @@ function Compliment(props) {
     );
   } else {
     return (
-      <div>
+       <div className="ButtonContainer">
         <p>Your score is {props.score}</p>
         <button
           className="compliment"
@@ -57,6 +58,7 @@ function Compliment(props) {
       </div>
     );
   }
+
 }
 
 export default Compliment;
