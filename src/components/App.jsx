@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import "../assets/App.css";
+import "../assets/App.css";
 // import.meta.env.VITE__APP_API_KEY;
 import Profile from "./Profile.jsx";
 
