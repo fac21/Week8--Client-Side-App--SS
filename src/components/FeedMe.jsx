@@ -19,10 +19,23 @@ function FeedMe(props) {
     setFood(foodItems[randomNumber]);
   }
 
-  return (
-    <div className="ButtonContainer">
-      <img className="foodEmoji" src={food} alt="pic-of-food-ite" />
-      <button 
+  if (food) {
+    return (
+      <div className="ButtonContainer">
+        <img className="foodEmoji" src={food} alt="pic-of-food-ite" />
+        <button
+          className="ButtonContainer--feedMe"
+          onClick={(e) => {
+            handleClickFood();
+          }}
+        >
+          Feed Me
+        </button>
+      </div>
+    );
+  } else {
+    return (
+      <button
         className="ButtonContainer--feedMe"
         onClick={(e) => {
           handleClickFood();
@@ -30,8 +43,8 @@ function FeedMe(props) {
       >
         Feed Me
       </button>
-    </div>
-  );
+    );
+  }
 }
 
 export default FeedMe;
