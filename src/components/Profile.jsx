@@ -11,7 +11,7 @@ function Profile(props) {
   const [score, setScore] = React.useState(0);
   const [secs, setSecs] = React.useState(8);
 
-  //a timer to decrement the score after 8 seconds
+  //A timer to decrement the score after 8 seconds
   React.useEffect(() => {
     const interval = setInterval(() => {
       if (secs > 0) {
@@ -47,7 +47,7 @@ function Profile(props) {
           <img
             src={nameData.avatar_url}
             alt={nameData.login + "'s image"}
-            class="tamagochi__screen"
+            className="tamagochi__screen"
           />
           <Compliment score={score} setScore={setScore} />
           <AdviceMe score={score} setScore={setScore} />

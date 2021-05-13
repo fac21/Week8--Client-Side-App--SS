@@ -26,10 +26,10 @@ function AdviceMe(props) {
   }, [fetching]);
 
   return (
-    <div>
+    <div className="ButtonContainer" >
       <h3>{advice}</h3>
       <button
-        className="advice"
+        className="ButtonContainer--advice"
         onClick={(e) => {
           handleClickAdvice();
           setFetching(true);
