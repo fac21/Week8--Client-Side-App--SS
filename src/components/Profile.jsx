@@ -9,7 +9,7 @@ const USER_URL = "https://api.github.com/users/";
 function Profile(props) {
   const [nameData, setName] = React.useState(null);
   const [score, setScore] = React.useState(0);
-  const [secs, setSecs] = React.useState(8);
+  const [secs, setSecs] = React.useState(10000);
 
   //a timer to decrement the score after 8 seconds
   React.useEffect(() => {

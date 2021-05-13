@@ -27,11 +27,11 @@ function Compliment(props) {
   }, [state]);
 
   return (
-    <div>
+    <div class="ButtonContainer">
       <h3>{compliment}</h3>
       <p>Your score is {props.score}</p>
       <button
-        className="compliment"
+        className="ButtonContainer--compliment"
         onClick={(e) => {
           setState(true);
           handleClick();

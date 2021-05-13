@@ -20,10 +20,10 @@ function FeedMe(props) {
   }
 
   return (
-    <div>
+    <div className="ButtonContainer">
       <img className="foodEmoji" src={food} alt="pic-of-food-ite" />
-      <button
-        className="feedMe"
+      <button 
+        className="ButtonContainer--feedMe"
         onClick={(e) => {
           handleClickFood();
         }}
