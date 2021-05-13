@@ -2,6 +2,7 @@ import React from "react";
 
 function Compliment(props) {
   const [compliment, setCompliment] = React.useState(null);
+  const [state, setState] = React.useState(false);
   const randomNumber = Math.floor(Math.random() * 10);
 
   function handleClick() {
@@ -9,17 +10,20 @@ function Compliment(props) {
   }
 
   React.useEffect(() => {
-    let cancelled = false;
-    fetch("https://complimentr.com/api")
-      .then((res) => res.json())
-      .then((data) => {
-        if (cancelled) return;
-        setCompliment(data.compliment);
-      });
-    return () => {
-      cancelled = true;
+    if (state) {
+      let cancelled = false;
+      fetch("https://complimentr.com/api")
+        .then((res) => res.json())
+        .then((data) => {
+          if (cancelled) return;
+          setCompliment(data.compliment);
+          setState(false);
+        });
+      return () => {
+        cancelled = true;
+      };
     }
-  }, [props.score]);
+  }, [state]);
 
   return (
     <div>
@@ -28,6 +32,7 @@ function Compliment(props) {
       <button
         className="compliment"
         onClick={(e) => {
+          setState(true);
           handleClick();
         }}
       >
@@ -36,6 +41,5 @@ function Compliment(props) {
     </div>
   );
 }
-
 
 export default Compliment;
