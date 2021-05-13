@@ -16,7 +16,6 @@ function Compliment(props) {
         if (cancelled) return;
         setCompliment(data.compliment);
       });
-  
     return () => {
       cancelled = true;
     }
