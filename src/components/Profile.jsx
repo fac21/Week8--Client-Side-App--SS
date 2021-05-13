@@ -1,6 +1,7 @@
 import React from "react";
 import AdviceMe from "./AdviceMe";
 import Compliment from "./Compliment";
+import FeedMe from "./FeedMe";
 
 const USER_URL = "https://api.github.com/users/";
 
@@ -19,6 +20,7 @@ function Profile(props) {
   if (!nameData) {
     return <h1>Loading</h1>;
   } else {
+
     if (score >= 50) {
       return <h1>Congratulations {nameData.login} has graduated FAC!</h1>;
     } else {
