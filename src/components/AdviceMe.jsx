@@ -25,20 +25,36 @@ function AdviceMe(props) {
     };
   }, [fetching]);
 
-  return (
-    <div>
-      <h3>{advice}</h3>
-      <button
-        className="advice"
-        onClick={(e) => {
-          handleClickAdvice();
-          setFetching(true);
-        }}
-      >
-        Give me an advice
-      </button>
-    </div>
-  );
+  if (advice) {
+    return (
+      <div>
+        <h3>{advice}</h3>
+        <button
+          className="advice"
+          onClick={(e) => {
+            handleClickAdvice();
+            setFetching(true);
+          }}
+        >
+          Give me an advice
+        </button>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <button
+          className="advice"
+          onClick={(e) => {
+            handleClickAdvice();
+            setFetching(true);
+          }}
+        >
+          Give me an advice
+        </button>
+      </div>
+    );
+  }
 }
 
 export default AdviceMe;

@@ -47,7 +47,7 @@ function Profile(props) {
           <img
             src={nameData.avatar_url}
             alt={nameData.login + "'s image"}
-            class="tamagochi__screen"
+            className="tamagochi__screen"
           />
           <Compliment score={score} setScore={setScore} />
           <AdviceMe score={score} setScore={setScore} />

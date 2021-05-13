@@ -10,7 +10,6 @@ function Compliment(props) {
   }
 
   React.useEffect(() => {
-
     if (state) {
       let cancelled = false;
       fetch("https://complimentr.com/api")
@@ -26,21 +25,38 @@ function Compliment(props) {
     }
   }, [state]);
 
-  return (
-    <div>
-      <h3>{compliment}</h3>
-      <p>Your score is {props.score}</p>
-      <button
-        className="compliment"
-        onClick={(e) => {
-          setState(true);
-          handleClick();
-        }}
-      >
-        Give me a compliment
-      </button>
-    </div>
-  );
+  if (compliment) {
+    return (
+      <div>
+        <h3>{compliment}</h3>
+        <p>Your score is {props.score}</p>
+        <button
+          className="compliment"
+          onClick={(e) => {
+            setState(true);
+            handleClick();
+          }}
+        >
+          Give me a compliment
+        </button>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <p>Your score is {props.score}</p>
+        <button
+          className="compliment"
+          onClick={(e) => {
+            setState(true);
+            handleClick();
+          }}
+        >
+          Give me a compliment
+        </button>
+      </div>
+    );
+  }
 }
 
 export default Compliment;
