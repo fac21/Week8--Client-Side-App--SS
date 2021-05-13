@@ -7,12 +7,22 @@ function AdviceMe(props) {
 
   function handleClickAdvice() {
     props.setScore(props.score + randomNumber);
+
+  }
+
+  React.useEffect(() => {
+    let cancelled = false;
     fetch("https://api.adviceslip.com/advice")
       .then((res) => res.json())
       .then((data) => {
+        if (cancelled) return;
         setAdvice(data.slip.advice);
       });
-  }
+  
+    return () => {
+      cancelled = true;
+    }
+  }, [props.score]);
 
   return (
     <div>
@@ -28,5 +38,6 @@ function AdviceMe(props) {
     </div>
   );
 }
+
 
 export default AdviceMe;
