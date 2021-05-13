@@ -21,8 +21,13 @@ function AdviceMe(props) {
   
     return () => {
       cancelled = true;
+<<<<<<< Updated upstream
     }
   }, [props.score]);
+=======
+    };
+  }, [fetching]);
+>>>>>>> Stashed changes
 
   return (
     <div>
