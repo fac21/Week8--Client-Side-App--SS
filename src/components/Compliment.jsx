@@ -18,7 +18,7 @@ function Compliment(props) {
       });
     return () => {
       cancelled = true;
-    }
+    };
   }, [props.score]);
 
   return (
@@ -36,6 +36,5 @@ function Compliment(props) {
     </div>
   );
 }
-
 
 export default Compliment;

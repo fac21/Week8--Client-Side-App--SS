@@ -7,7 +7,6 @@ function AdviceMe(props) {
 
   function handleClickAdvice() {
     props.setScore(props.score + randomNumber);
-
   }
 
   React.useEffect(() => {
@@ -18,16 +17,11 @@ function AdviceMe(props) {
         if (cancelled) return;
         setAdvice(data.slip.advice);
       });
-  
+
     return () => {
       cancelled = true;
-<<<<<<< Updated upstream
-    }
-  }, [props.score]);
-=======
     };
   }, [fetching]);
->>>>>>> Stashed changes
 
   return (
     <div>
@@ -43,6 +37,5 @@ function AdviceMe(props) {
     </div>
   );
 }
-
 
 export default AdviceMe;
