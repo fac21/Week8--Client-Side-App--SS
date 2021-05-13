@@ -9,7 +9,7 @@ function App() {
   if (!nameData) {
     return (
       <div className="app">
-        <h1 className="title">Look after your FAC member</h1>
+        <h1 className="title">FAC Tamagochi</h1>
         <form
           onSubmit={(e) => {
             e.preventDefault();
