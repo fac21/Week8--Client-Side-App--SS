@@ -10,7 +10,7 @@ function FeedMe(props) {
   let foodItems = [Bagel, Burrito, Cookie, Dumpling, Lollipop];
 
   const randomScoreNumber = Math.floor(Math.random() * 10);
-  
+
   function handleClickFood() {
     props.setScore(props.score + randomScoreNumber);
 

@@ -23,7 +23,7 @@ function AdviceMe(props) {
     return () => {
       cancelled = true;
     };
-  }, [props.score]);
+  }, [fetching]);
 
   return (
     <div>

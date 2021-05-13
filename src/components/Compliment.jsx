@@ -10,6 +10,7 @@ function Compliment(props) {
   }
 
   React.useEffect(() => {
+
     if (state) {
       let cancelled = false;
       fetch("https://complimentr.com/api")

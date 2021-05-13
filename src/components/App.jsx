@@ -27,6 +27,8 @@ function App() {
             />
           </label>
         </form>
+        <h2>How to play</h2>
+        <p>See how nice you can be, do it quickly!</p>
       </div>
     );
   } else {
