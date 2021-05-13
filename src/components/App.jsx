@@ -26,10 +26,10 @@ function App() {
               placeholder="search for github user"
               size="50"
             />
-            <button class="form--btn" type="submit">Hit me!</button>
+            <button className="form--btn" type="submit">Hit me!</button>
         </form>
         <aside>
-        <h2 class="app--title">How to play?</h2>
+        <h2 className="app--title">How to play?</h2>
         <p>See how nice you can be, in the shortest time!</p>
         </aside>
       </div>

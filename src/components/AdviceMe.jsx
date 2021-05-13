@@ -26,7 +26,7 @@ function AdviceMe(props) {
   }, [fetching]);
 
   return (
-    <div class="ButtonContainer" >
+    <div className="ButtonContainer" >
       <h3>{advice}</h3>
       <button
         className="ButtonContainer--advice"

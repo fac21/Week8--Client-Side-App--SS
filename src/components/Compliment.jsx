@@ -27,7 +27,7 @@ function Compliment(props) {
   }, [state]);
 
   return (
-    <div class="ButtonContainer">
+    <div className="ButtonContainer">
       <h3>{compliment}</h3>
       <p>Your score is {props.score}</p>
       <button
