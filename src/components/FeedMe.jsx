@@ -9,8 +9,11 @@ function FeedMe(props) {
   const [food, setFood] = React.useState(null);
   let foodItems = [Bagel, Burrito, Cookie, Dumpling, Lollipop];
 
+  const randomScoreNumber = Math.floor(Math.random() * 10);
+  
   function handleClickFood() {
-    props.setScore(props.score + 5);
+    props.setScore(props.score + randomScoreNumber);
+
     const randomNumber = Math.floor(Math.random() * (foodItems.length - 1));
 
     setFood(foodItems[randomNumber]);

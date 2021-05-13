@@ -20,15 +20,20 @@ function Profile(props) {
   if (!nameData) {
     return <h1>Loading</h1>;
   } else {
-    return (
-      <div>
-        <h1>Mentor {nameData.login}</h1>
-        <img src={nameData.avatar_url} alt={nameData.login + "'s image"} />
-        <Compliment score={score} setScore={setScore} />
-        <AdviceMe score={score} setScore={setScore} />
-        <FeedMe score={score} setScore={setScore} />
-      </div>
-    );
+
+    if (score >= 50) {
+      return <h1>Congratulations {nameData.login} has graduated FAC!</h1>;
+    } else {
+      return (
+        <div>
+          <h1>Mentor {nameData.login}</h1>
+          <img src={nameData.avatar_url} alt={nameData.login + "'s image"} />
+          <Compliment score={score} setScore={setScore} />
+          <AdviceMe score={score} setScore={setScore} />
+          <FeedMe score={score} setScore={setScore} />
+        </div>
+      );
+    }
   }
 }
 

@@ -3,8 +3,10 @@ import React from "react";
 function AdviceMe(props) {
   const [advice, setAdvice] = React.useState(null);
 
+  const randomNumber = Math.floor(Math.random() * 10);
+
   function handleClickAdvice() {
-    props.setScore(props.score + 5);
+    props.setScore(props.score + randomNumber);
     fetch("https://api.adviceslip.com/advice")
       .then((res) => res.json())
       .then((data) => {
@@ -18,7 +20,7 @@ function AdviceMe(props) {
       <button
         className="advice"
         onClick={(e) => {
-            handleClickAdvice();
+          handleClickAdvice();
         }}
       >
         Give me an advice
