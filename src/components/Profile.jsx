@@ -1,9 +1,11 @@
 import React from "react";
+import Compliment from "./Compliment";
 
 const USER_URL = "https://api.github.com/users/";
 
 function Profile(props) {
   const [nameData, setName] = React.useState(null);
+  const [score, setScore] = React.useState(0);
 
   React.useEffect(() => {
     fetch(USER_URL + props.name)
@@ -20,14 +22,7 @@ function Profile(props) {
       <div>
         <h1>Mentor {nameData.login}</h1>
         <img src={nameData.avatar_url} alt={nameData.login + "'s image"} />
-        <button
-          className="compliment"
-          onClick={(e) => {
-            console.log(e);
-          }}
-        >
-          Give me a compliment
-        </button>
+        <Compliment score={score} setScore={setScore} />
         <button>Feed Me</button>
         <button>Advise me</button>
       </div>
