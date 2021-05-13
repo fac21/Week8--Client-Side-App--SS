@@ -2,13 +2,28 @@ import React from "react";
 import AdviceMe from "./AdviceMe";
 import Compliment from "./Compliment";
 import FeedMe from "./FeedMe";
-import App from "../assets/App.css"
+import App from "../assets/App.css";
 
 const USER_URL = "https://api.github.com/users/";
 
 function Profile(props) {
   const [nameData, setName] = React.useState(null);
   const [score, setScore] = React.useState(0);
+  const [secs, setSecs] = React.useState(8);
+
+  //a timer to decrement the score after 8 seconds
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      if (secs > 0) {
+        setSecs(secs - 1);
+      } else {
+        setScore(score - 10);
+        setSecs(5);
+        clearInterval(interval);
+      }
+      return clearInterval(interval);
+    }, 1000);
+  }, [secs]);
 
   React.useEffect(() => {
     fetch(USER_URL + props.name)
@@ -21,14 +36,19 @@ function Profile(props) {
   if (!nameData) {
     return <h1>Loading</h1>;
   } else {
-
     if (score >= 50) {
       return <h1>Congratulations {nameData.login} has graduated FAC!</h1>;
+    } else if (score < 0) {
+      return <h1>Sorry, you were too rude, nice try!</h1>;
     } else {
       return (
-        <div class="tamagochi">
+        <div className="tamagochi">
           <h1>Mentor {nameData.login}</h1>
-          <img src={nameData.avatar_url} alt={nameData.login + "'s image"} class="tamagochi__screen"/>
+          <img
+            src={nameData.avatar_url}
+            alt={nameData.login + "'s image"}
+            class="tamagochi__screen"
+          />
           <Compliment score={score} setScore={setScore} />
           <AdviceMe score={score} setScore={setScore} />
           <FeedMe score={score} setScore={setScore} />
