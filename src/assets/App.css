@@ -1,60 +1,3 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-button {
-  font-size: calc(10px + 2vmin);
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */
-
 :root {
 }
 
@@ -62,6 +5,7 @@ body {
   background-color: #5179d9;
   max-width: 100vw;
   max-height: 100vh;
+  font-family: "VT323", monospace;
 }
 
 .tamagochi {
@@ -74,7 +18,6 @@ body {
   grid-template-rows: 75% auto;
   grid-gap: 2.5em;
   justify-items: center;
-  font-family: "";
   border-radius: 50% 50% 10em 10em;
   border-top-left-radius: 11em 15em;
   border-top-right-radius: 11em 15em;
@@ -108,7 +51,7 @@ body {
 }
 
 .appContent {
-  line-height: 0.5rem;
+  line-height: 1.5rem;
   padding: 1.5rem;
 }
 
@@ -142,6 +85,11 @@ input[type="text"]:focus {
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+input[type="submit"],
+button[type="submit"] {
+  font-family: "VT323", monospace;
 }
 
 .ButtonContainer > button {

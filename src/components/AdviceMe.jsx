@@ -1,5 +1,5 @@
 import React from "react";
-import adviceBubble from "../assets/Advice-bubble.png"
+import adviceBubble from "../assets/Advice-bubble.png";
 
 function AdviceMe(props) {
   const [advice, setAdvice] = React.useState(null);
@@ -26,11 +26,16 @@ function AdviceMe(props) {
     };
   }, [fetching]);
 
-  
   if (advice) {
     return (
       <React.Fragment>
-        <img src={adviceBubble} alt="tamagochi-advice-bubble" className="tamagochi__adviceBubble" width="120px" height="120px"/>
+        <img
+          src={adviceBubble}
+          alt="tamagochi-advice-bubble"
+          className="tamagochi__adviceBubble"
+          width="120px"
+          height="120px"
+        />
         <h3 className="advice__heading">{advice}</h3>
         <button
           className="ButtonContainer__advice"
@@ -39,21 +44,21 @@ function AdviceMe(props) {
             setFetching(true);
           }}
         >
-          Give me an advice
+          Advise me!
         </button>
       </React.Fragment>
     );
   } else {
     return (
-        <button
-          className="ButtonContainer__advice"
-          onClick={(e) => {
-            handleClickAdvice();
-            setFetching(true);
-          }}
-        >
-          Give me an advice
-        </button>
+      <button
+        className="ButtonContainer__advice"
+        onClick={(e) => {
+          handleClickAdvice();
+          setFetching(true);
+        }}
+      >
+        Advise me!
+      </button>
     );
   }
 }

@@ -21,7 +21,7 @@ function FeedMe(props) {
 
   if (food) {
     return (
-        <React.Fragment>
+      <React.Fragment>
         <img className="foodEmoji" src={food} alt="pic-of-food-ite" />
         <button
           className="ButtonContainer__feedMe"
@@ -31,22 +31,36 @@ function FeedMe(props) {
         >
           Feed Me
         </button>
-        </React.Fragment>
+      </React.Fragment>
     );
   } else {
     return (
-      <div className="ButtonContainer">
-        <button
-          className="ButtonContainer--feedMe"
-          onClick={(e) => {
-            handleClickFood();
-          }}
-        >
-          Feed Me
-        </button>
-      </div>
+      <button
+        className="ButtonContainer__feedMe"
+        onClick={(e) => {
+          handleClickFood();
+        }}
+      >
+        Feed Me
+      </button>
     );
   }
+
+  // return (
+  //   <div className="ButtonContainer">
+  //     {food ? (
+  //       <img className="foodEmoji" src={food} alt="pic-of-food-ite" />
+  //     ) : null}
+  //     <button
+  //       className="ButtonContainer--feedMe"
+  //       onClick={(e) => {
+  //         handleClickFood();
+  //       }}
+  //     >
+  //       Feed Me
+  //     </button>
+  //   </div>
+  // );
 }
 
 export default FeedMe;

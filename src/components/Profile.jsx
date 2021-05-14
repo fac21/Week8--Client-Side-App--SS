@@ -21,7 +21,7 @@ function Profile(props) {
         setSecs(5);
         clearInterval(interval);
       }
-      return clearInterval(interval);
+      clearInterval(interval);
     }, 1000);
   }, [secs]);
 
@@ -49,11 +49,18 @@ function Profile(props) {
             alt={nameData.login + "'s image"}
             className="tamagochi__screen"
           />
-          <p className="scoreText" >Your score is {score}</p>
-          <div className="ButtonContainer" >
-          <Compliment score={score} setScore={setScore} />
-          <AdviceMe score={score} setScore={setScore} />
-          <FeedMe score={score} setScore={setScore} />
+          <p className="scoreText">Your score is {score}</p>
+
+          <div className="ButtonContainer">
+            <Compliment score={score} setScore={setScore} />
+            <AdviceMe score={score} setScore={setScore} />
+            <FeedMe score={score} setScore={setScore} />
+          </div>
+
+          <div>
+            <p className="timerText">
+              {secs} seconds left before we knock some points off!
+            </p>
           </div>
         </div>
       );
