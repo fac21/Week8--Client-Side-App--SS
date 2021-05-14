@@ -4,6 +4,12 @@ Saki and Sevda
 ## Visit our Website
 See our site here: https://fac-tamagochi.netlify.app/
 
+## How to play?
+
+Keep your fac member happy by giving them compliments, advising them or feeding them. 
+Be careful! If you ignore them, there’s a timer that will knock points off you. 
+Get to 50 points to win! Go below zero and your fac member will quit! 
+
 ## Technologies
 ![JavaScript](https://img.shields.io/badge/-JavaScript-1572B6?style=flat&logo=javascript&logoColor=white&link=/)
 ![React](https://img.shields.io/badge/-React-1572B6?style=flat&logo=react&logoColor=white&link=/)
