@@ -34,7 +34,7 @@ function Profile(props) {
   }, [props.name]);
 
   if (!nameData) {
-    return <h1>Loading</h1>;
+    return <h1>Loading...</h1>;
   } else {
     if (score >= 50) {
       return <h1>Congratulations {nameData.login} has graduated FAC!</h1>;
@@ -43,15 +43,18 @@ function Profile(props) {
     } else {
       return (
         <div className="tamagochi">
-          <h1>Mentor {nameData.login}</h1>
+          <h1>Mentor {nameData.login.toUpperCase()}</h1>
           <img
             src={nameData.avatar_url}
             alt={nameData.login + "'s image"}
             className="tamagochi__screen"
           />
+          <p className="scoreText" >Your score is {score}</p>
+          <div className="ButtonContainer" >
           <Compliment score={score} setScore={setScore} />
           <AdviceMe score={score} setScore={setScore} />
           <FeedMe score={score} setScore={setScore} />
+          </div>
         </div>
       );
     }

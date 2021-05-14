@@ -1,4 +1,5 @@
 import React from "react";
+import complimentBubble from "../assets/compliment-bubble.png"
 
 function Compliment(props) {
   const [compliment, setCompliment] = React.useState(null);
@@ -28,11 +29,11 @@ function Compliment(props) {
 
   if (compliment) {
     return (
-       <div className="ButtonContainer">
-        <h3>{compliment}</h3>
-        <p>Your score is {props.score}</p>
+      <React.Fragment>
+        <img src={complimentBubble} alt="tamagochi-compliment-bubble" className="tamagochi__complimentBubble" width="120px" height="120px"/>
+      <h3 className="compliment__heading" >{compliment}</h3>
         <button
-          className="compliment"
+          className="ButtonContainer__compliment"
           onClick={(e) => {
             setState(true);
             handleClick();
@@ -40,14 +41,12 @@ function Compliment(props) {
         >
           Give me a compliment
         </button>
-      </div>
+        </React.Fragment>
     );
   } else {
     return (
-       <div className="ButtonContainer">
-        <p>Your score is {props.score}</p>
         <button
-          className="compliment"
+          className="ButtonContainer__compliment"
           onClick={(e) => {
             setState(true);
             handleClick();
@@ -55,7 +54,6 @@ function Compliment(props) {
         >
           Give me a compliment
         </button>
-      </div>
     );
   }
 
