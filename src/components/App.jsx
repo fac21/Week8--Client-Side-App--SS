@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../assets/App.css";
-// import.meta.env.VITE__APP_API_KEY;
+import.meta.env.VITE__APP_API_KEY;
 import Profile from "./Profile.jsx";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   if (!nameData) {
     return (
       <div className="app">
-        <h1 className="title">FAC Tamagochi</h1>
+        <h1 className="app__title">FAC Tamagochi</h1>
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -30,7 +30,7 @@ function App() {
             Hit me!
           </button>
         </form>
-        <aside>
+        <aside className="appContent">
           <h2 className="app--title">How to play?</h2>
           <p>
             Keep your fac member happy by giving them compliments, advising them

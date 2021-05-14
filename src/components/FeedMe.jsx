@@ -21,17 +21,17 @@ function FeedMe(props) {
 
   if (food) {
     return (
-      <div className="ButtonContainer">
+        <React.Fragment>
         <img className="foodEmoji" src={food} alt="pic-of-food-ite" />
         <button
-          className="ButtonContainer--feedMe"
+          className="ButtonContainer__feedMe"
           onClick={(e) => {
             handleClickFood();
           }}
         >
           Feed Me
         </button>
-      </div>
+        </React.Fragment>
     );
   } else {
     return (
