@@ -35,14 +35,16 @@ function FeedMe(props) {
     );
   } else {
     return (
-      <button
-        className="ButtonContainer--feedMe"
-        onClick={(e) => {
-          handleClickFood();
-        }}
-      >
-        Feed Me
-      </button>
+      <div className="ButtonContainer">
+        <button
+          className="ButtonContainer--feedMe"
+          onClick={(e) => {
+            handleClickFood();
+          }}
+        >
+          Feed Me
+        </button>
+      </div>
     );
   }
 }

@@ -9,7 +9,7 @@ const USER_URL = "https://api.github.com/users/";
 function Profile(props) {
   const [nameData, setName] = React.useState(null);
   const [score, setScore] = React.useState(0);
-  const [secs, setSecs] = React.useState(8);
+  const [secs, setSecs] = React.useState(15);
 
   //A timer to decrement the score after 8 seconds
   React.useEffect(() => {
@@ -39,7 +39,7 @@ function Profile(props) {
     if (score >= 50) {
       return <h1>Congratulations {nameData.login} has graduated FAC!</h1>;
     } else if (score < 0) {
-      return <h1>Sorry, you were too rude, nice try!</h1>;
+      return <h1>Sorry, you were too rude, {nameData.login} quit!</h1>;
     } else {
       return (
         <div className="tamagochi">

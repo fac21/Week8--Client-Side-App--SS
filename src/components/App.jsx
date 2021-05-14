@@ -17,20 +17,27 @@ function App() {
           }}
         >
           <label htmlFor="username">Search</label>
-            <input
-              id="username"
-              aria-label="search for gitHub user"
-              aria-required="true"
-              name="username"
-              type="text"
-              placeholder="search for github user"
-              size="50"
-            />
-            <button className="form--btn" type="submit">Hit me!</button>
+          <input
+            id="username"
+            aria-label="search for gitHub user"
+            aria-required="true"
+            name="username"
+            type="text"
+            placeholder="search for github user"
+            size="50"
+          />
+          <button className="form--btn" type="submit">
+            Hit me!
+          </button>
         </form>
         <aside>
-        <h2 className="app--title">How to play?</h2>
-        <p>See how nice you can be, in the shortest time!</p>
+          <h2 className="app--title">How to play?</h2>
+          <p>
+            Keep your fac member happy by giving them compliments, advising them
+            or feeding them. Be careful! If you ignore them, there’s a timer
+            that will knock points off you. Get to 50 points to win! Go below
+            zero and your fac member will quit!
+          </p>
         </aside>
       </div>
     );
